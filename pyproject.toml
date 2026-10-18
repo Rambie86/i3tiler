@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "i3tiler"
+version = "0.1.0"
+description = "Recursive 2x2 / binary tiling for i3: moves windows by insertion, never swap, with at most one resize per window"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = ["i3ipc"]
+keywords = ["i3", "i3wm", "tiling", "i3ipc", "bsp", "autotiling"]
+
+[project.urls]
+Homepage = "https://github.com/Rambie86/i3tiler"
+
+[project.scripts]
+i3tiler = "i3tiler.__main__:main"
+
+[tool.setuptools]
+packages = ["i3tiler"]
